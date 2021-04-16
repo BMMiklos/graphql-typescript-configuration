@@ -9,7 +9,7 @@ Installing TypeScript and GraphQL, then configuring them with using nodemon.
 ### Installing TypeScript:
 
 ```
-npm install typescript graphql graphql-express --save-dev @tsconfig/node14 @types/express @types/express-graphql @types/graphql
+npm install typescript graphql graphql-express --save-dev @tsconfig/node14 @types/express @types/express-graphql
 ```
 
 * `@tsconfig/node14` is a recommended TypeScript configuration for Node. See more: [TSConfig Bases](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#tsconfig-bases) 
