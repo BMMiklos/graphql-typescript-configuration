@@ -4,17 +4,16 @@
 
 ### Summary
 
-Installing TypeScript and GraphQL, then configuring them with using nodemon.
+Installing TypeScript, Express and GraphQL, then configuring them with using nodemon.
 
-### Installing TypeScript:
+### Installing Dependecies:
 
 ```
-npm install typescript graphql graphql-express --save-dev @tsconfig/node14 @types/express
+npm install typescript express graphql graphql-express --save-dev @tsconfig/node14 @types/express
 ```
 
+* `@types/express` is for Express to can be use with strict TypeScript
 * `@tsconfig/node14` is a recommended TypeScript configuration for Node. See more: [TSConfig Bases](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#tsconfig-bases) 
-
-// todo - describe what i am going to install
 
 ### Make the development comfortable with Nodemon:
 
@@ -26,7 +25,7 @@ npm install --save-dev nodemon
 
 ### Configuring .json files
 
-In the ```packahe.json``` file we have to set up the starting scripts.
+In the ```package.json``` file we have to set up the starting scripts.
 
 ```json
  "scripts": {
@@ -36,7 +35,7 @@ In the ```packahe.json``` file we have to set up the starting scripts.
     "tsc:watch": "npx tsc --watch"
   }
 ```
-* `"serve": "npx nodemon dist/."` will make sure that node app is being server from the ```dist``` directory
+* `"serve": "npx nodemon dist/."` will make sure that node app is being server from the `dist` directory
 * `"build": "npx tsc"` build all of the TypeScript files once, because TypeScript's file file watcher only looks for changes
 * `"tsc:watch": "npx tsc --watch"` TypeScript's built in file watcher solution, but only watches for changes, so you have to run `build` command once
 
@@ -55,8 +54,8 @@ In the `tsconfig.json` file, we have to change the following
 }
 ```
 
-* `"extends": "@tsconfig/node14/tsconfig.json"` Extends a tsconfig file from `node_modules` directory what we previousli installed
-* `"outDir": "./dist"` outDir is the place where the compiled ts files (after compilation is js) to the `dist` folder
+* `"extends": "@tsconfig/node14/tsconfig.json"` Extends a tsconfig file from `node_modules` directory what we previously installed
+* `"outDir": "./dist"` outDir is the folder where the compiled ts files will be palced, in this case `dist` folder
 
 ## Folder Structure
 
